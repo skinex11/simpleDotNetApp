@@ -1,0 +1,20 @@
+trigger:
+- none
+
+pr:
+- master
+
+pool:
+  vmImage: windows-latest
+
+jobs:
+  - job: app1
+    displayName: app
+    steps:
+      - task: DotNetCoreCLI@2
+        inputs:
+          command: 'build'
+          projects: |
+            patryk.konopka.service1/patryk.konopka.service1.csproj
+            patryk.konopka.service2/patryk.konopka.service2.csproj
+            patryk.konopka.service3/patryk.konopka.service3.csproj
