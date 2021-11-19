@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\skine\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\skine\\.nuget\\packages"
+    ]
+  }
+}
