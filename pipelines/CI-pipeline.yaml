@@ -26,17 +26,17 @@ jobs:
         displayName: Test 1
         inputs:
           command: 'test'
-          projects: 'patryk.konopka.service1/patryk.konopka.service1.csproj'
+          projects: 'patryk.konopka.testsservice1/patryk.konopka.testsservice1.csproj'
           testRunTitle: '$(Build.DefinitionName)1 | $(Build.Reason) |$(Build.SourceVersion)'
       - task: DotNetCoreCLI@2
         displayName: Test 2
         inputs:
           command: 'test'
-          projects: 'patryk.konopka.service2/patryk.konopka.service2.csproj'
+          projects: 'patryk.konopka.testsservice2/patryk.konopka.testsservice2.csproj'
           testRunTitle: '$(Build.DefinitionName)2 | $(Build.Reason) |$(Build.SourceVersion)'
       - task: DotNetCoreCLI@2
         displayName: Test 3
         inputs:
           command: 'test'
-          projects: 'patryk.konopka.service3/patryk.konopka.service3.csproj'
+          projects: 'patryk.konopka.testsservice3/patryk.konopka.testsservice3.csproj'
           testRunTitle: '$(Build.DefinitionName)3 | $(Build.Reason) |$(Build.SourceVersion)'
