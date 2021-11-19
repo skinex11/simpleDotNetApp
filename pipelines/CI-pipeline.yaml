@@ -8,36 +8,16 @@ pool:
   vmImage: windows-latest
 
 jobs:
-  - job: Build
+  - job: BuildTestPublish
     displayName: Build
     steps:
       - task: DotNetCoreCLI@2
         displayName: Build
         inputs:
           command: 'build'
-          projects: |
-            patryk.konopka.service1/patryk.konopka.service1.csproj
-            patryk.konopka.service2/patryk.konopka.service2.csproj
-            patryk.konopka.service3/patryk.konopka.service3.csproj
-  - job: Test
-    displayName: Test
-    dependsOn: Build
-    steps:
+          projects: '*konopka.service*/*.csproj'
       - task: DotNetCoreCLI@2
-        displayName: Test 1
+        displayName: Tests
         inputs:
           command: 'test'
-          projects: 'patryk.konopka.tests.service1/patryk.konopka.tests.service1.csproj'
-          testRunTitle: '$(Build.DefinitionName)1 | $(Build.Reason) |$(Build.SourceVersion)'
-      - task: DotNetCoreCLI@2
-        displayName: Test 2
-        inputs:
-          command: 'test'
-          projects: 'patryk.konopka.tests.service2/patryk.konopka.tests.service2.csproj'
-          testRunTitle: '$(Build.DefinitionName)2 | $(Build.Reason) |$(Build.SourceVersion)'
-      - task: DotNetCoreCLI@2
-        displayName: Test 3
-        inputs:
-          command: 'test'
-          projects: 'patryk.konopka.tests.service3/patryk.konopka.tests.service3.csproj'
-          testRunTitle: '$(Build.DefinitionName)3 | $(Build.Reason) |$(Build.SourceVersion)'
+          projects: '*tests*/*.csproj'
