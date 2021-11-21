@@ -21,3 +21,24 @@ jobs:
         inputs:
           command: 'test'
           projects: '*tests/*.csproj'
+      - task: Docker@2
+        displayName: Container1
+        inputs:
+          containerRegistry: 'dockerHub'
+          repository: 'simplewebapp'
+          command: 'buildAndPush'
+          Dockerfile: '*1/Dockerfile'
+      - task: Docker@2
+        displayName: Container2
+        inputs:
+          containerRegistry: 'dockerHub'
+          repository: 'simplewebapp'
+          command: 'buildAndPush'
+          Dockerfile: '*2/Dockerfile'
+      - task: Docker@2
+        displayName: Container3
+        inputs:
+          containerRegistry: 'dockerHub'
+          repository: 'simplewebapp'
+          command: 'buildAndPush'
+          Dockerfile: '*3/Dockerfile'
