@@ -29,9 +29,10 @@ jobs:
         displayName: Container1
         inputs:
           containerRegistry: 'dockerHub'
-          repository: 'skinex/simplewebapp '
+          repository: 'skinex/simplewebapp1'
           command: 'buildAndPush'
           Dockerfile: '*1/Dockerfile'
+          tags: '$(Build.BuildNumber)'
   - job: Container2
     dependsOn: BuildTest
     displayName: Container2
@@ -40,9 +41,10 @@ jobs:
         displayName: Container2
         inputs:
           containerRegistry: 'dockerHub'
-          repository: 'skinex/simplewebapp '
+          repository: 'skinex/simplewebapp2'
           command: 'buildAndPush'
           Dockerfile: '*2/Dockerfile'
+          tags: '$(Build.BuildNumber)'
   - job: Container3
     dependsOn: BuildTest
     displayName: Container3
@@ -51,6 +53,7 @@ jobs:
         displayName: Container3
         inputs:
           containerRegistry: 'dockerHub'
-          repository: 'skinex/simplewebapp '
+          repository: 'skinex/simplewebapp3'
           command: 'buildAndPush'
           Dockerfile: '*3/Dockerfile'
+          tags: '$(Build.BuildNumber)'
