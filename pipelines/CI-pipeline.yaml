@@ -37,20 +37,20 @@ jobs:
     displayName: Container2
     steps:
       - task: Docker@2
-        displayName: Container1
+        displayName: Container2
         inputs:
           containerRegistry: 'dockerHub'
           repository: 'simplewebapp'
           command: 'buildAndPush'
-          Dockerfile: '*1/Dockerfile'
+          Dockerfile: '*2/Dockerfile'
   - job: Container3
     dependsOn: BuildTest
     displayName: Container3
     steps:
       - task: Docker@2
-        displayName: Container1
+        displayName: Container3
         inputs:
           containerRegistry: 'dockerHub'
           repository: 'simplewebapp'
           command: 'buildAndPush'
-          Dockerfile: '*1/Dockerfile'
+          Dockerfile: '*3/Dockerfile'
