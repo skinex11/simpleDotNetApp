@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\skine\\Desktop\\allegro\\patryk.konopka.service2\\patryk.konopka.service2.csproj": {}
+    "C:\\Users\\skine\\simpleDotNetApp\\patryk.konopka.service2\\patryk.konopka.service2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\skine\\Desktop\\allegro\\patryk.konopka.service2\\patryk.konopka.service2.csproj": {
+    "C:\\Users\\skine\\simpleDotNetApp\\patryk.konopka.service2\\patryk.konopka.service2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\skine\\Desktop\\allegro\\patryk.konopka.service2\\patryk.konopka.service2.csproj",
+        "projectUniqueName": "C:\\Users\\skine\\simpleDotNetApp\\patryk.konopka.service2\\patryk.konopka.service2.csproj",
         "projectName": "patryk.konopka.service2",
-        "projectPath": "C:\\Users\\skine\\Desktop\\allegro\\patryk.konopka.service2\\patryk.konopka.service2.csproj",
+        "projectPath": "C:\\Users\\skine\\simpleDotNetApp\\patryk.konopka.service2\\patryk.konopka.service2.csproj",
         "packagesPath": "C:\\Users\\skine\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\skine\\Desktop\\allegro\\patryk.konopka.service2\\obj\\",
+        "outputPath": "C:\\Users\\skine\\simpleDotNetApp\\patryk.konopka.service2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\skine\\AppData\\Roaming\\NuGet\\NuGet.Config"
