@@ -29,7 +29,7 @@ jobs:
         displayName: Container1
         inputs:
           containerRegistry: 'dockerHub'
-          repository: 'simplewebapp'
+          repository: 'skinex/simplewebapp '
           command: 'buildAndPush'
           Dockerfile: '*1/Dockerfile'
   - job: Container2
@@ -40,7 +40,7 @@ jobs:
         displayName: Container2
         inputs:
           containerRegistry: 'dockerHub'
-          repository: 'simplewebapp'
+          repository: 'skinex/simplewebapp '
           command: 'buildAndPush'
           Dockerfile: '*2/Dockerfile'
   - job: Container3
@@ -51,6 +51,6 @@ jobs:
         displayName: Container3
         inputs:
           containerRegistry: 'dockerHub'
-          repository: 'simplewebapp'
+          repository: 'skinex/simplewebapp '
           command: 'buildAndPush'
           Dockerfile: '*3/Dockerfile'
