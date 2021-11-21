@@ -8,8 +8,8 @@ pool:
   vmImage: windows-latest
 
 jobs:
-  - job: BuildTestPublish
-    displayName: Build
+  - job: BuildTest
+    displayName: BuildTest
     steps:
       - task: DotNetCoreCLI@2
         displayName: Build
@@ -21,6 +21,10 @@ jobs:
         inputs:
           command: 'test'
           projects: '*tests/*.csproj'
+  - job: Container1
+    dependsOn: BuildTest
+    displayName: Container1
+    steps:
       - task: Docker@2
         displayName: Container1
         inputs:
@@ -28,17 +32,25 @@ jobs:
           repository: 'simplewebapp'
           command: 'buildAndPush'
           Dockerfile: '*1/Dockerfile'
+  - job: Container2
+    dependsOn: BuildTest
+    displayName: Container2
+    steps:
       - task: Docker@2
-        displayName: Container2
+        displayName: Container1
         inputs:
           containerRegistry: 'dockerHub'
           repository: 'simplewebapp'
           command: 'buildAndPush'
-          Dockerfile: '*2/Dockerfile'
+          Dockerfile: '*1/Dockerfile'
+  - job: Container3
+    dependsOn: BuildTest
+    displayName: Container3
+    steps:
       - task: Docker@2
-        displayName: Container3
+        displayName: Container1
         inputs:
           containerRegistry: 'dockerHub'
           repository: 'simplewebapp'
           command: 'buildAndPush'
-          Dockerfile: '*3/Dockerfile'
+          Dockerfile: '*1/Dockerfile'
